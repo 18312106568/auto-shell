@@ -1,0 +1,24 @@
+linux系统安装JDK https://www.cnblogs.com/xuliangxing/p/7066913.html
+下载java压缩包: wget http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz
+解压 tar包: tar –xvf jdk-8u171-linux-x64.tar.gz 
+
+配置环境：vim /etc/profile
+export JAVA_HOME=/usr/java/jdk1.8.0_141
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
+export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
+export PATH=$PATH:${JAVA_PATH}
+使配置生效：source /etc/profile
+
+linux系统安装maven https://blog.csdn.net/javaee_ssh/article/details/43774583
+
+linux系统安装git  https://blog.csdn.net/wxy540843763/article/details/80197301
+
+linux系统安装mysql: https://blog.csdn.net/a116475939/article/details/74625377
+echo "export PATH=$PATH:/usr/git/git-2.18.0-rc2/bin" >> /etc/bashrc
+使配置生效：source /etc/bashrc
+
+git config --global user.name "18312106568"
+git config --global user.email 315077558@qq.com
+
+/usr/local/mysql-5.6.26/bin/mysqld --defaults-file=/usr/local/mysql-5.6.26/my.cnf --basedir=/usr/local/mysql-5.6.26 --datadir=/data/mysqldata/3306/data --plugin-dir=/usr/local/mysql-5.6.26/lib/plugin --user=mysql --log-error=/data/mysqldata/3306/log/error.log --open-files-limit=10240 --pid-file=/data/mysqldata/3306/mysql.pid --socket=/data/mysqldata/3306/mysql.sock --port=3306
